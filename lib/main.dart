@@ -68,8 +68,8 @@ class HomePage extends StatelessWidget {
       ),
       body: ValueListenableBuilder(
         valueListenable: ContactBook(),
-        builder: (contact, value, child) {
-          final contacts = value as List<Contact>;
+        builder: (context, value, child) {
+          final contacts = value;
           return ListView.builder(
             itemCount: contacts.length,
             itemBuilder: (context, index) {
